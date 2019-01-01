@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter();
+}
+
+dependencies {
+    implementation 'org.mariadb.jdbc:mariadb-java-client:+'
+}
+
+mainClassName='org.jacob.jdbc.raw.ArticleMain'
