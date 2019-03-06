@@ -28,7 +28,7 @@ Enter password:
 </pre>
 
 <pre>
-MariaDB [(none)]> use <i>SCHEMA;
+MariaDB [(none)]> use <i>SCHEMA</i>;
 MariaDB [<i>SCHEMA</i>]> CREATE TABLE article (
 	articleId int primary key AUTO_INCREMENT,
 	title varchar(100) NOT NULL,
