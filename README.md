@@ -10,11 +10,11 @@ SCHEMA : 자신이 사용할 스키마(데이터베이스). 예) mydb\
 USERNAME : 스키마에 접속할 사용자. 예) jacob\
 PASSWORD : 사용자의 비밀번호. 예) xxxxxxxx
 
-$ mysql -uroot -p\
-Enter password:
+>$ mysql -uroot -p\
+>Enter password:
 
-MariaDB [(none)]> grant all on SCHEMA.* to USERNAME@localhost identified by 'PASSWORD';\
-MariaDB [(none)]> quit
+>MariaDB [(none)]> grant all on SCHEMA.* to USERNAME@localhost identified by 'PASSWORD';\
+>MariaDB [(none)]> quit
 
 root 접속을 끊고, 위에서 만든 사용자로 접속해서 스키마에 테이블을 생성한다.
 
