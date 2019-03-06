@@ -1,25 +1,25 @@
 # jdbc_study
 
-이 것은 데이터베이스에 접속해서 데이터를 읽고 쓰는 자바 애플리케이션이다.\
+이 것은 데이터베이스에 접속해서 데이터를 읽고 쓰는 자바 애플리케이션이다.
 
 이 애플리케이션을 실행하기 전에 먼저 데이터베이스를 설정해야 한다.\
 데이터베이스는 MariaDB를 사용한다.\
-root로 접속해서 다음과 같이 schema를 만들고 사용자를 만든다.\
+root로 접속해서 다음과 같이 schema를 만들고 사용자를 만든다.
 
 SCHEMA에 자신이 사용할 스키마(데이터베이스) 이름을 적는다. 예) mydb\
 USERNAME에 스키마에 접속할 사용자를 적는다. 예) jacob\
-PASSWORD에 사용자의 비밀번호를 적는다. 예) xxxxxxxx\
+PASSWORD에 사용자의 비밀번호를 적는다. 예) xxxxxxxx
 
 $ mysql -uroot -p\
-Enter password:\
+Enter password:
 
 MariaDB [(none)]> grant all on SCHEMA.* to USERNAME@localhost identfied by 'PASSWORD';\
-MariaDB [(none)]> quit\
+MariaDB [(none)]> quit
 
-root 접속을 끊고, 위에서 만든 사용자로 접속해서 스키마에 테이블을 생성한다.\
+root 접속을 끊고, 위에서 만든 사용자로 접속해서 스키마에 테이블을 생성한다.
 
 $ mysql -uUSERNAME -p\
-Enter password:\
+Enter password:
 
 MariaDB [(none)]> use SCHEMA;\
 MariaDB [SCHEMA]> CREATE TABLE article (\
