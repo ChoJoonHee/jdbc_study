@@ -13,7 +13,7 @@ PASSWORD : 사용자의 비밀번호. 예) xxxxxxxx
 $ mysql -uroot -p\
 Enter password:
 
-MariaDB [(none)]> grant all on SCHEMA.* to USERNAME@localhost identfied by 'PASSWORD';\
+MariaDB [(none)]> grant all on SCHEMA.* to USERNAME@localhost identified by 'PASSWORD';\
 MariaDB [(none)]> quit
 
 root 접속을 끊고, 위에서 만든 사용자로 접속해서 스키마에 테이블을 생성한다.
