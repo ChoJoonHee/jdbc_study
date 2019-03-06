@@ -1,9 +1,7 @@
 # jdbc_study
 
 이 앱을 실행하기 전에 먼저 데이터베이스를 설정해야 한다.
-
 데이터베이스는 MariaDB를 사용한다.
-
 root로 접속해서 다음과 같이 schema를 만들고 사용자를 만든다.
 
 SCHEMA에 자신이 사용할 schema 이름을 적는다. 예) mydb
