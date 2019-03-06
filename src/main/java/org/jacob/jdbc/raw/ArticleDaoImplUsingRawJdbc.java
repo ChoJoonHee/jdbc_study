@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class ArticleDaoImpl implements ArticleDao {
+public class ArticleDaoImplUsingRawJdbc implements ArticleDao {
     static final String LIST_ARTICLES = "SELECT articleId, title, name, cdate FROM article LIMIT 10";
     static final String GET_ARTICLE = "SELECT articleId, title, content, name, cdate FROM article WHERE articleId=?";
     static final String ADD_ARTICLE = "INSERT INTO article(title, content, userId, name) VALUES (?,?,?,?)";
@@ -25,7 +25,7 @@ public class ArticleDaoImpl implements ArticleDao {
     /**
      * Default Constructor
      */
-    public ArticleDaoImpl() {
+    public ArticleDaoImplUsingRawJdbc() {
         // db.properties 파일에서 url을 읽어서 dataSource 생성
         Properties props = new Properties();
         try(InputStream is = getClass().getResourceAsStream("/db.properties")) {

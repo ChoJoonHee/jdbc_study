@@ -1,11 +1,9 @@
 package org.jacob.jdbc.raw;
 
-import org.jacob.jdbc.template.ArticleDaoImplUsingTemplate;
-
 import java.util.List;
 
 public class ArticleMain {
-    ArticleDao articleDao = new ArticleDaoImplUsingTemplate();
+    ArticleDao articleDao = new ArticleDaoImplUsingRawJdbc();
 
     /**
      * main 메서드
