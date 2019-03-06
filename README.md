@@ -6,9 +6,9 @@
 데이터베이스는 MariaDB를 사용한다.\
 root로 접속해서 다음과 같이 스키마를 만들고 사용자를 만든다.
 
-SCHEMA에 자신이 사용할 스키마(데이터베이스) 이름을 적는다. 예) mydb\
-USERNAME에 스키마에 접속할 사용자를 적는다. 예) jacob\
-PASSWORD에 사용자의 비밀번호를 적는다. 예) xxxxxxxx
+SCHEMA : 자신이 사용할 스키마(데이터베이스). 예) mydb\
+USERNAME : 스키마에 접속할 사용자. 예) jacob\
+PASSWORD : 사용자의 비밀번호. 예) xxxxxxxx
 
 $ mysql -uroot -p\
 Enter password:
