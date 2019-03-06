@@ -16,20 +16,20 @@ Enter password:
 </pre>
 
 <pre>
-MariaDB [(none)]> grant all on SCHEMA.* to *USERNAME*@localhost identified by 'PASSWORD';
+MariaDB [(none)]> grant all on <i>SCHEMA</i>.* to <i>USERNAME</i>@localhost identified by '<i>PASSWORD</i>';
 MariaDB [(none)]> quit
 </pre>
 
 root 접속을 끊고, 위에서 만든 사용자로 접속해서 스키마에 테이블을 생성한다.
 
 <pre>
-$ mysql -uUSERNAME -p
+$ mysql -u<i>USERNAME</i> -p
 Enter password:
 </pre>
 
 <pre>
-MariaDB [(none)]> use SCHEMA;
-MariaDB [SCHEMA]> CREATE TABLE article (
+MariaDB [(none)]> use <i>SCHEMA;
+MariaDB [<i>SCHEMA</i>]> CREATE TABLE article (
 	articleId int primary key AUTO_INCREMENT,
 	title varchar(100) NOT NULL,
 	content text NOT NULL,
@@ -38,7 +38,7 @@ MariaDB [SCHEMA]> CREATE TABLE article (
 	cdate datetime NOT NULL DEFAULT current_timestamp()
 );
 
-MariaDB [SCHEMA]>
+MariaDB [<i>SCHEMA</i>]>
 </pre>
 
 이제 애플리케이션을 실행할 준비가 되었다.
