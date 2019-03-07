@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
 }
 
 repositories {
@@ -10,5 +9,3 @@ repositories {
 dependencies {
     implementation 'org.mariadb.jdbc:mariadb-java-client:+'
 }
-
-mainClassName='org.jacob.jdbc.raw.ArticleMain'
