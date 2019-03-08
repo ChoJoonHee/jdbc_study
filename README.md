@@ -16,6 +16,7 @@ Enter password:
 </pre>
 
 <pre>
+MariaDB [(none)]> create schema <i>SCHEMA</i>;
 MariaDB [(none)]> grant all on <i>SCHEMA</i>.* to <i>USERNAME</i>@localhost identified by '<i>PASSWORD</i>';
 MariaDB [(none)]> quit
 </pre>
