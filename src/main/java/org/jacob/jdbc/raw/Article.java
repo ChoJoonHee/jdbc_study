@@ -58,7 +58,8 @@ public class Article {
 
 	@Override
 	public String toString() {
-		return "Article [articleId=" + articleId + ", title=" + title + ", content=" + content + ", userId="
-				+ userId + ", name=" + name + ", cdate=" + cdate + "]";
+		return "Article [articleId=" + articleId + ", title=" + title
+				+ ", content=" + content + ", userId=" + userId + ", name="
+				+ name + ", cdate=" + cdate + "]";
 	}
 }
