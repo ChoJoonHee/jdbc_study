@@ -1,5 +1,7 @@
 # jdbc_study
 
+## 데이터베이스 설정
+
 이 것은 데이터베이스에 접속해서 데이터를 읽고 쓰는 자바 애플리케이션이다.
 
 이 애플리케이션을 실행하기 전에 먼저 데이터베이스를 설정해야 한다.\
@@ -43,3 +45,10 @@ MariaDB [<i>SCHEMA</i>]>
 </pre>
 
 이제 애플리케이션을 실행할 준비가 되었다.
+
+## 클래스 설명
+
+|Article|도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다. article 테이블에서 데이터를 가져오거나 article 테이블에 데이터를 저장할 때 데이터를 담는다.|
+|ArticleDao|Data Access Object. 데이터베이스에 접속해서 데이터를 조작하는 인터페이스.|
+|ArticleDaoImplUsingRawJdbc|ArticleDao 인터페이스의 구현 클래스. 순수 JDBC 코드로 구현한다.|
+|DaoException|SQLException을 Wrapping하는 RuntimeException.|
