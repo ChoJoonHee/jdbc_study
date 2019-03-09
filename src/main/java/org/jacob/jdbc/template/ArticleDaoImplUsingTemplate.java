@@ -1,5 +1,7 @@
 package org.jacob.jdbc.template;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -32,14 +34,18 @@ public class ArticleDaoImplUsingTemplate implements ArticleDao {
 	 */
 	@Override
 	public List<Article> listArticles() {
-		return jdbcTemplate.queryForList(LIST_ARTICLES, null, rs -> {
-			Article article = new Article();
-			article.setArticleId(rs.getString("articleId"));
-			article.setTitle(rs.getString("title"));
-			article.setName(rs.getString("name"));
-			article.setCdate(rs.getString("cdate"));
-			return article;
-		});
+		return jdbcTemplate.queryForList(LIST_ARTICLES, null,
+				new RowMapper<>() {
+					@Override
+					public Article mapRow(ResultSet rs) throws SQLException {
+						Article article = new Article();
+						article.setArticleId(rs.getString("articleId"));
+						article.setTitle(rs.getString("title"));
+						article.setName(rs.getString("name"));
+						article.setCdate(rs.getString("cdate"));
+						return article;
+					}
+				});
 	}
 
 	/**
@@ -48,14 +54,17 @@ public class ArticleDaoImplUsingTemplate implements ArticleDao {
 	@Override
 	public Article getArticle(String articleId) {
 		return jdbcTemplate.queryForObject(GET_ARTICLE,
-				new Object[] { articleId }, rs -> {
-					Article article = new Article();
-					article.setArticleId(rs.getString("articleId"));
-					article.setTitle(rs.getString("title"));
-					article.setContent(rs.getString("content"));
-					article.setName(rs.getString("name"));
-					article.setCdate(rs.getString("cdate"));
-					return article;
+				new Object[] { articleId }, new RowMapper<>() {
+					@Override
+					public Article mapRow(ResultSet rs) throws SQLException {
+						Article article = new Article();
+						article.setArticleId(rs.getString("articleId"));
+						article.setTitle(rs.getString("title"));
+						article.setContent(rs.getString("content"));
+						article.setName(rs.getString("name"));
+						article.setCdate(rs.getString("cdate"));
+						return article;
+					}
 				});
 	}
 
