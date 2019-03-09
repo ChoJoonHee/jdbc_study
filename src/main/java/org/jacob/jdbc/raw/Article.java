@@ -1,13 +1,32 @@
 package org.jacob.jdbc.raw;
 
+/**
+ * 도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다.
+ * 
+ * @author Jacob
+ */
 public class Article {
+	// 글번호
 	String articleId;
+
+	// 제목
 	String title;
+
+	// 내용
 	String content;
+
+	// 작성자 아이디
 	String userId;
+
+	// 작성자 이름
 	String name;
+
+	// 등록일시
 	String cdate;
 
+	/*
+	 * Getter and Setter methods
+	 */
 	public String getArticleId() {
 		return articleId;
 	}
@@ -56,6 +75,9 @@ public class Article {
 		this.cdate = cdate;
 	}
 
+	/**
+	 * 인스턴스의 멤버를 출력하는 메서드
+	 */
 	@Override
 	public String toString() {
 		return "Article [articleId=" + articleId + ", title=" + title

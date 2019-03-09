@@ -11,14 +11,41 @@ import javax.sql.DataSource;
 
 import org.mariadb.jdbc.MariaDbDataSource;
 
+/**
+ * ArticleDao 인터페이스의 구현 클래스. 순수 JDBC 코드로 구현한다.
+ * 
+ * @author Jacob
+ */
 public class ArticleDaoImplUsingRawJdbc implements ArticleDao {
 
+	/**
+	 * 목록 가져오는 sql
+	 */
 	static final String LIST_ARTICLES = "SELECT articleId, title, name, cdate FROM article LIMIT 20";
+	
+	/**
+	 * 글 1개 가져오는 sql
+	 */
 	static final String GET_ARTICLE = "SELECT articleId, title, content, name, cdate FROM article WHERE articleId=?";
+	
+	/**
+	 * 글 등록하는 sql
+	 */
 	static final String ADD_ARTICLE = "INSERT INTO article(title, content, userId, name) VALUES (?,?,?,?)";
+	
+	/**
+	 * 글 수정하는 sql
+	 */
 	static final String UPDATE_ARTICLE = "UPDATE article SET title=?, content=? WHERE articleId=?";
+	
+	/**
+	 * 글 삭제하는 sql
+	 */
 	static final String DELETE_ARTICLE = "DELETE FROM article WHERE articleId=?";
 
+	/**
+	 * 데이터베이스 DataSource
+	 */
 	DataSource ds;
 
 	/**
@@ -55,7 +82,7 @@ public class ArticleDaoImplUsingRawJdbc implements ArticleDao {
 	}
 
 	/**
-	 * 게시글 상세
+	 * 게시글 1개 조회
 	 */
 	@Override
 	public Article getArticle(String articleId) throws DaoException {
