@@ -48,12 +48,17 @@ MariaDB [<i>SCHEMA</i>]>
 
 ## 클래스 설명
 
+### org.jacob.jdbc.raw 패키지
 |클래스|설명|
 |---|---|
 |Article|도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다.|
 |ArticleDao|Data Access Object. 데이터베이스에 접속해서 데이터를 조작하는 인터페이스.|
 |ArticleDaoImplUsingRawJdbc|ArticleDao 인터페이스의 구현 클래스. 순수 JDBC 코드로 구현한다.|
 |DaoException|SQLException을 wrapping하는 RuntimeException.|
+
+### org.jacob.jdbc.template 패키지
+|클래스|설명|
+|---|---|
 |ArticleDaoImplUsingTemplate|ArticleDao 인터페이스의 구현 클래스. JdbcTemplate을 사용한다.|
 |JdbcTemplate|JDBC helper 클래스.|
 |RowMapper|mapRow()를 파라미터로 넘기기 위한 FunctionalInterface.|
