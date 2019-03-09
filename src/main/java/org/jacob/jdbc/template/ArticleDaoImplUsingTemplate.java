@@ -52,7 +52,8 @@ public class ArticleDaoImplUsingTemplate implements ArticleDao {
 	JdbcTemplate jdbcTemplate;
 
 	/**
-	 * Default Constructor
+	 * Default Constructor<br> 
+	 * dataSource와 jdbcTemplate을 초기화한다.
 	 */
 	public ArticleDaoImplUsingTemplate() {
 		dataSource = new MariaDbDataSource(

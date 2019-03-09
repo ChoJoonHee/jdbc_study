@@ -20,6 +20,10 @@ public class JdbcTemplate {
 
 	DataSource dataSource;
 
+	/**
+	 * dataSource로 초기화하는 컨스트럭터
+	 * @param dataSource
+	 */
 	public JdbcTemplate(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}

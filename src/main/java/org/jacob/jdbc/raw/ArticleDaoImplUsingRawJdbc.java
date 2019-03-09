@@ -49,7 +49,8 @@ public class ArticleDaoImplUsingRawJdbc implements ArticleDao {
 	DataSource ds;
 
 	/**
-	 * Default Constructor
+	 * Default Constructor<br>
+	 * dataSource를 초기화한다.
 	 */
 	public ArticleDaoImplUsingRawJdbc() {
 		ds = new MariaDbDataSource(
