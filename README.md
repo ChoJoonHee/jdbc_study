@@ -50,7 +50,7 @@ MariaDB [<i>SCHEMA</i>]>
 
 |클래스|설명|
 |---|---|
-|Article|도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다. article 테이블에서 데이터를 가져오거나 article 테이블에 데이터를 저장할 때 데이터를 담는다.|
+|Article|도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다.|
 |ArticleDao|Data Access Object. 데이터베이스에 접속해서 데이터를 조작하는 인터페이스.|
 |ArticleDaoImplUsingRawJdbc|ArticleDao 인터페이스의 구현 클래스. 순수 JDBC 코드로 구현한다.|
 |DaoException|SQLException을 wrapping하는 RuntimeException.|
