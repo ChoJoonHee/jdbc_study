@@ -56,4 +56,4 @@ MariaDB [<i>SCHEMA</i>]>
 |DaoException|SQLException을 wrapping하는 RuntimeException.|
 |ArticleDaoImplUsingTemplate|ArticleDao 인터페이스의 구현 클래스. JdbcTemplate을 사용한다.|
 |JdbcTemplate|JDBC helper 클래스.|
-|RowMapper|mapRow() 
+|RowMapper|mapRow()를 파라미터로 넘기기 위한 FunctionalInterface.|
