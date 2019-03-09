@@ -95,10 +95,6 @@ public class JdbcTemplate {
 				PreparedStatement ps = con.prepareStatement(query)) {
 			// preparedStatement에 파라미터를 넣음
 			setParams(ps, params);
-			if (params != null) {
-				for (int i = 0; i < params.length; i++)
-					ps.setObject(i + 1, params[i]);
-			}
 			return ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
